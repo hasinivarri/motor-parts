@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spencer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* CSS for navigation bar */
+        body {
+            background-image: url("https://www.shutterstock.com/shutterstock/photos/785007553/display_1500/stock-vector-seamless-white-background-with-gray-linear-icons-of-car-parts-and-elements-785007553.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        .navbar .home {
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        .navbar .home:hover {
+            background-color: #333;
+            color: wheat;
+        }
+    </style>
+    <style>
+        .button-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+        }
+      
+        .btn {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 10px;
+          width: 45%;
+          height: 150px;
+          font-size: 24px;
+          font-weight: bold;
+          color: white;
+          background-color: #4CAF50;
+          border-radius: 10px;
+          text-align: center;
+          text-decoration: none;
+        }
+      
+        .btn img {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 10px;
+        }
+      </style>      
+</head>
+
+<body>
+    <div class="navbar mb-4">
+        <h1><a class="home" href="/">Spencer</a></h1>
+        <div>
+            <a href="{% url 'do_logout' %}">log Out</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container">
+
+            <div class="button-container">
+                <a href="{% url 'list' %}" class="btn">
+                    <img src="https://via.placeholder.com/80x80.png?text=Icon+1" alt="Icon 1">
+                    View all
+                </a>
+                <a href="{% url 'add' %}" class="btn">
+                    <img src="https://via.placeholder.com/80x80.png?text=Icon+2" alt="Icon 2">
+                    Add Item
+                </a>
+            </div>
+            <div class="button-container">
+                <a href="{% url 'view_delete' %}" class="btn">
+                    <img src="https://via.placeholder.com/80x80.png?text=Icon+3" alt="Icon 3">
+                    Delete Item
+                </a>
+                <a href="{% url 'sale' %}" class="btn">
+                    <img src="https://via.placeholder.com/80x80.png?text=Icon+4" alt="Icon 4">
+                    Report sale
+                </a>
+            </div>
+            <div class="button-container">
+                <a href="{% url 'sale_list' %}" class="btn">
+                    <img src="https://via.placeholder.com/80x80.png?text=Icon+5" alt="Icon 5">
+                    View Sales
+                </a>
+                <a href="{% url 'reorder' %}" class="btn">
+                    <img src="https://via.placeholder.com/80x80.png?text=Icon+6" alt="Icon 6">
+                    Reorder List
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
